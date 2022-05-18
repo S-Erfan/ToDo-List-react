@@ -1,0 +1,42 @@
+.container {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.input {
+    background: #864879;
+    width: 350px;
+    height: 50px;
+    font-size: 1.3rem;
+    border: none;
+    outline: none;
+    color: #fff;
+    border-radius: 15px;
+    padding: 8px 60px 8px 15px;
+}
+.input::placeholder{
+    color: #fff;
+}
+.addBtn {
+    width: 40px;
+    /* margin-left: 25px; */
+    transition: all .2s linear;
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+}
+.addBtn:hover {
+    transform: scale(1.1);
+}
+
+
+@media (max-width: 370px) {
+    .input {
+        background: #864879;
+        width: 250px;
+        height: 50px;
+        font-size: 1.1rem;
+    }
+}

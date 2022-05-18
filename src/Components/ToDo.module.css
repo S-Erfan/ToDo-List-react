@@ -1,0 +1,79 @@
+.container {
+    background-color: #FFD523;
+    width: 550px;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 15px 0;
+    border-radius: 15px;
+    padding: 10px 15px;
+    font-size: 1.5rem;
+}
+.Checked {
+    opacity: .5;
+}
+.Checked p {
+    text-decoration: line-through;
+}
+.buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttons img{
+    width: 30px;
+    cursor: pointer;
+    transition: all .2s ease;
+    margin-left: 10px;
+}
+
+.buttons img:hover{
+    animation: shaked .4s infinite alternate linear;
+    transform: scale(1.1);
+}
+
+@keyframes shaked {
+    40% {
+        transform: rotateZ(15deg);
+    }
+    70% {
+        transform: rotateZ(-15deg);
+    }
+    100% {
+        transform: rotateZ(0deg);
+    }
+}
+
+.buttons input{
+    appearance: none;
+    -webkit-appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 5px;
+    background-color: #fff;
+    cursor: pointer;
+    border: 1px solid #ddd;
+    position: relative;
+    overflow: hidden;
+}
+.buttons input::before{
+    content: '';
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: blue;
+    position: absolute;
+    top: 3.5px; left: 3.5px;
+    transform: scale(0);
+    transition: all .2s ease;
+}
+
+.buttons input:checked::before{
+    transform: scale(1);
+}
+
+.buttons input:checked ~ .buttons input::before {
+    background-color: #FFD523;
+}
