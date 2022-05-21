@@ -1,35 +1,43 @@
 .container {
-    background-color: #FFD523;
-    width: 550px;
-    height: 50px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 15px 0;
-    border-radius: 15px;
-    padding: 10px 15px;
+    padding: 10px 25px;
     font-size: 1.5rem;
+    margin-bottom: 40px ;
+    border-bottom: 1px solid rgb(0, 0, 0);
+    transition: all .5s ease-in;
 }
+/* .container p {
+    width: 70%;
+
+} */
 .Checked {
     opacity: .5;
+    transform: scale(.9);
 }
 .Checked p {
     text-decoration: line-through;
 }
+.buttons p {
+    word-break: break-all;
+    max-width: 80%;
+}
 .buttons{
+    /* width: 80%; */
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
+    transition: all .5s linear;
 }
 
-.buttons img{
+.icon {
     width: 30px;
     cursor: pointer;
     transition: all .2s ease;
-    margin-left: 10px;
 }
 
-.buttons img:hover{
+.icon:hover{
     animation: shaked .4s infinite alternate linear;
     transform: scale(1.1);
 }
@@ -57,23 +65,28 @@
     border: 1px solid #ddd;
     position: relative;
     overflow: hidden;
+    margin: 0 15px;
+    transition: all .2s linear;
+    z-index: 1;
 }
 .buttons input::before{
     content: '';
     width: 15px;
     height: 15px;
-    border-radius: 50%;
+    clip-path: polygon(35% 71%, 90% 10%, 100% 24%, 50% 73%, 36% 90%, 9% 65%, 19% 52%);
     background-color: blue;
     position: absolute;
     top: 3.5px; left: 3.5px;
     transform: scale(0);
     transition: all .2s ease;
+    z-index: 4;
 }
 
 .buttons input:checked::before{
-    transform: scale(1);
+    transition: all .4s ease-in;
+    transform: scale(1.8);
 }
 
-.buttons input:checked ~ .buttons input::before {
-    background-color: #FFD523;
+.buttons input:checked {
+    transition: all .5s ease;
 }

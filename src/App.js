@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React from 'react';
 
 
 //components
@@ -8,9 +8,7 @@ import Tasks from './Components/Tasks';
 //context
 import TodoContext from './Context/TodoContext';
 
-
 const App = () => {
-
 
   return (
     <TodoContext>

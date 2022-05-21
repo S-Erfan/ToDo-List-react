@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useContext } from 'react';
+import React, { useRef, useContext } from 'react';
 import { ToastContainer, toast, Slide } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -30,7 +30,7 @@ const Header = () => {
         toDo.current.value = '';
     }
 
-    const {todo, dispatch} = useContext(taskContext);
+    const {dispatch} = useContext(taskContext);
 
 
     return (
