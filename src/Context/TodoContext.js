@@ -26,6 +26,9 @@ const reduce = (state, action)=> {
             const removedState = state.filter(todo => todo.task !== action.payload);
             window.localStorage.setItem("todos", JSON.stringify(removedState));
             return removedState;
+        case 'CLEAR_ALL': 
+            saveTodo = [];
+            return initialState;
         default:
             return saveTodo;
         
@@ -38,7 +41,6 @@ export const taskContext = createContext();
 const TodoContext = ({children}) => {
 
     const [todo, dispatch] = useReducer(reduce, initialState);
-
 
 
     useEffect(()=> {

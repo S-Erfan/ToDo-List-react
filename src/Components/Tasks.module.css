@@ -19,13 +19,20 @@
     align-items: center;
     font-weight: 700;
     margin-bottom: 40px;
+    --font-menu: 20px;
 }
 .link span {
-    color: #fff;
-    background-color: #65d;
+    color: #65d;
+    background-color: #fff;
     padding: 10px 15px;
     border-radius: 15px;
     cursor: pointer;
+    transition: all .3s linear;
+    font-size: var(--font-menu);
+}
+.menuActive {
+    color: #fff !important;
+    background-color: #65d !important;
 }
 .container button {
     color: #fff;
@@ -39,9 +46,19 @@
     outline: none;
 }
 
+.menuBar {
+    
+}
+
 @media (max-width: 580px) {
     .container {
         width: 90vw;
         font-size: .8rem;
+    }
+    .link {
+        --font-menu: 14px;
+    }
+    .link span {
+        padding: 5px 10px;
     }
 }
